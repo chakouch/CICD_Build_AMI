@@ -1,8 +1,10 @@
 {
     "variables": {
         "region": "eu-west-1",
+        "aws_access_key": "AKIASV3V36N47Y6RATVY",
+        "aws_secret_key": "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",
         "ssh_username": "ubuntu",
-	"base_ami" : "ami-0f630a3f40b1eb0b8",
+        "base_ami" : "ami-0f630a3f40b1eb0b8",
         "instance_type": "t2.micro",
         "temporary_security_group_source_cidrs": "{{user `ec2_ip`}}/32",
         "associate_public_ip_address": "true"
@@ -10,6 +12,8 @@
     "builders": [
         {
             "type": "amazon-ebs",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
             "region": "{{user `region`}}",
 	    "source_ami": "{{user `base_ami`}}",
             "instance_type": "{{user `instance_type`}}",
