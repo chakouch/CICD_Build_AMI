@@ -1,6 +1,6 @@
 {
     "variables": {
-        "region": "eu-west-1",
+        "region": "eu-west-2",
         "aws_access_key": "AKIASV3V36N47Y6RATVY",
         "aws_secret_key": "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",
         "ssh_username": "ubuntu",
