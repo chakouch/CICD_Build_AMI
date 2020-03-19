@@ -11,7 +11,7 @@
         {
             "type": "amazon-ebs",
             "region": "{{user `region`}}",
-	    "source_ami": "{{user `base_ami`}}"
+	    "source_ami": "{{user `base_ami`}}",
             "instance_type": "{{user `instance_type`}}",
             "ssh_username": "{{user `ssh_username`}}",
             "ami_name": "{{user `env`}}-{{user `app_name`}}-AMI-{{ isotime \"01022006-150405\"}}",
